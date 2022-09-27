@@ -62,14 +62,13 @@ function onClick() {
     }, 1000);
 }
 
-function renderTimer(time) {
-    const { days, hours, minutes, seconds } = convertMs(time);
-  
+function renderTimer({days, hours, minutes, seconds}) {
+   
     refs.days.textContent = addLeadingZero(days);
     refs.hours.textContent = addLeadingZero(hours);
     refs.minutes.textContent = addLeadingZero(minutes);
     refs.seconds.textContent = addLeadingZero(seconds);
-  };
+  }
 function addLeadingZero(value) {
     return String(value).padStart(2, '0');
 }
