@@ -1,7 +1,7 @@
-import Notiflix, { Notify } from 'notiflix';
+import  { Notify } from 'notiflix';
 
 const form = document.querySelector('.form');
-form.addEventListener('submit', createPromise);
+form.addEventListener('submit', createPromises);
 
 
 function createPromise(position, delay) {
