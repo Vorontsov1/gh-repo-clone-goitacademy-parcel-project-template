@@ -46,11 +46,12 @@ function onCountryInput() {
 }
 
 function renderCountryList(countries) {
-    const markUp = countries.map(({ capital, population, languages }) => {
-        return `<li class = "country-list__flag" src = "${flag.svg}" alt = "Flag of ${name.official}" width = 30px height = 30px>
-        <h2 class = "country-list__name">${name.official}</h2> </li> `;
-    })
-        .join('');
+    const markUp = countries
+      .map(({ flags: { svg }, name: { official } }) => {
+        return `<li class=list-item> <img class=icon src=${svg} alt=${official} width=60 />
+    ${official}</li>`;
+      })
+      .join('');
     return markUp;
 }
 
@@ -64,7 +65,7 @@ function renderCountryInfo(countries) {
           </ul>`;
     })
         .join('');
-    return markUp
+    return markUp;
 }
 
 function allertWrongName() {
