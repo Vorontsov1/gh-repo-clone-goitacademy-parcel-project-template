@@ -1,6 +1,6 @@
 import './css/styles.css';
 
-import { debounce } from 'lodash.debounce';
+import debounce  from 'lodash.debounce';
 import Notiflix from 'notiflix';
 import { fetchCountries } from './js/fetchCountries';
 
@@ -14,7 +14,7 @@ countryInput.addEventListener('input', debounce(onCountryInput, DEBOUNCE_DELAY)
 );
 
 function onCountryInput() {
-  const name = countryInput.ariaValueMax.trim();
+  const name = countryInput.value.trim();
   if (name === '') {
     return (countryList.innerHTML = ''), (countryInfo.innerHTML = '');
   }
