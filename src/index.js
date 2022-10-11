@@ -57,7 +57,7 @@ function onSearchForm(e) {
 
 function onLoadMore() {
     page += 1;
-    simpleLightbox.destroy();
+    simpleLightBox.destroy();
 
     fetchImg(query, page, perPage)
         .then(({ data }) => {
