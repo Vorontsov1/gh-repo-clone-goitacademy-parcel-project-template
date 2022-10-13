@@ -29,7 +29,7 @@
     "notiflix": "^3.2.5",
     "sass": "^1.55.0",
     "simple-lightbox": "^2.1.0",
-    "simplelightbox": "^2.10.3"
+    "simplelightbox": "^2.10.4"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
